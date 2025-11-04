@@ -1,0 +1,42 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+    <changeSet id="001_create_tables.sql" author="Minh" dbms="postgresql" onValidationFail="HALT" failOnError="true">
+        <sqlFile path="db/changelog/001_create_tables.sql"/>
+    </changeSet>
+    <changeSet id="002_add_enable_and_verification_token.sql" author="Hoc" dbms="postgresql" onValidationFail="HALT" failOnError="true">
+        <sqlFile path="db/changelog/002_add_enable_column_and_verification_token.sql"/>
+    </changeSet>
+    <changeSet id="003_add_language_code.sql" author="Minh" dbms="postgresql" onValidationFail="HALT" failOnError="true">
+        <sqlFile path="db/changelog/003_add_language_code.sql"/>
+    </changeSet>
+    <changeSet id="004_change_result_text.sql" author="Minh" dbms="postgresql" onValidationFail="HALT" failOnError="true">
+        <sqlFile path="db/changelog/004_change_result_text.sql"/>
+    </changeSet>
+    <changeSet id="006_add_user_id_to_collectionvoca.sql" author="Hoc" dbms="postgresql" onValidationFail="HALT" failOnError="true">
+        <sqlFile path="db/changelog/006_add_user_id_to_collectionvoca.sql"/>
+    </changeSet>
+    <changeSet id="007_create_invalid_token_table.sql" author="Hoc" dbms="postgresql" onValidationFail="HALT" failOnError="true">
+        <sqlFile path="db/changelog/007_create_invalid_token_table.sql"/>
+    </changeSet>
+    <changeSet id="005_add_image_column" author="Loc" dbms="postgresql" onValidationFail="HALT" failOnError="true">
+        <sqlFile path="db/changelog/005_add_image_column.sql"/>
+    </changeSet>
+
+    <changeSet id="10_8_add_column_lesson.sql" author="Loc" dbms="postgresql" onValidationFail="HALT" failOnError="true">
+        <sqlFile path="db/changelog/10_8_add_column_lesson.sql"/>
+    </changeSet>
+
+    <changeSet id="11_8_add_apikey_column_user.sql" author="Loc" dbms="postgresql" onValidationFail="HALT" failOnError="true">
+        <sqlFile path="db/changelog/11_8_add_apikey_column_user.sql"/>
+    </changeSet>
+    <changeSet id="11_8_add_createdat_column_history.sql" author="Loc" dbms="postgresql" onValidationFail="HALT" failOnError="true">
+    <sqlFile path="db/changelog/11_8_add_createdat_column_history.sql"/>
+    </changeSet>
+    <changeSet id="009_add_column_created_at_vocab.sql" author="Hoc" dbms="postgresql" onValidationFail="HALT" failOnError="true">
+        <sqlFile path="db/changelog/009_add_column_created_at_vocab.sql"/>
+    </changeSet>
+
+
+</databaseChangeLog>
