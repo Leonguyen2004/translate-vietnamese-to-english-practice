@@ -4,7 +4,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/lmh
     username: postgres
-    password: 123456
+    password: ${DB_PASSWORD}
   data:
     redis:
       host: localhost
@@ -35,7 +35,7 @@ spring:
         registration:
           google:
             client-id: 35790031845-c8n8krgp3rs5464q0dt7tlj74ps79kmb.apps.googleusercontent.com
-            client-secret: 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
+            client-secret: ${GOOGLE_CLIENT_SECRET}
             redirect-uri: http://localhost:8081/login/oauth2/code/google
 
             scope:
@@ -80,4 +80,3 @@ server:
 logging:
   level:
     org.springframework.mail: DEBUG
-
