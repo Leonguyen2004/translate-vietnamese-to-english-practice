@@ -1,0 +1,27 @@
+version: "3.8"
+
+name: translate-practice
+
+services:
+  db:
+    image: postgres:16-alpine # Hoặc version bạn đang dùng
+    container_name: lmh-postgres-container
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres # Username
+      - POSTGRES_PASSWORD=123456 # Password mới (bạn tự đặt)
+      - POSTGRES_DB=lmh # Tên database project của bạn
+    ports:
+      - "5432:5432" # Map cổng 5432 của máy thật vào 5432 của Docker
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Mount volume để KHÔNG MẤT DATA khi tắt container
+
+  redis:
+    image: redis:7-alpine
+    container_name: lmh-redis-container
+    restart: always
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres_data:

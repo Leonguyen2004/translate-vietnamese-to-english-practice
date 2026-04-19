@@ -1,2 +1,0 @@
-ALTER TABLE public.history
-ADD COLUMN IF NOT EXISTS created_at TIMESTAMP;
