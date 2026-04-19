@@ -1,5 +1,7 @@
 package com.lmh.web.service.impl;
 
+
+import com.lmh.web.service.user.VocabService;
 import com.lmh.web.dto.DictionaryApiResponse;
 import com.lmh.web.dto.VocabularyDTO;
 import com.lmh.web.dto.request.vocab.CreateVocabularyRequest;
@@ -16,8 +18,8 @@ import com.lmh.web.repository.CollectionVocaRepository;
 import com.lmh.web.repository.FlashCardRepository;
 import com.lmh.web.repository.UserRepository;
 import com.lmh.web.repository.VocabularyRepository;
-import com.lmh.web.service.FileStorageService;
-import com.lmh.web.service.VocabService;
+import com.lmh.web.service.user.FileStorageService;
+import com.lmh.web.service.user.VocabService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,7 @@
 package com.lmh.web.service.impl;
 
 
+import com.lmh.web.service.user.CollectionVocabService;
 import com.lmh.web.dto.CollectionVocabDTO;
 import com.lmh.web.dto.VocabularyDTO;
 import com.lmh.web.dto.request.collection.CreateCollectionRequest;
@@ -13,7 +14,7 @@ import com.lmh.web.model.CollectionVoca;
 
 import com.lmh.web.repository.CollectionVocaRepository;
 import com.lmh.web.repository.UserRepository;
-import com.lmh.web.service.CollectionVocabService;
+import com.lmh.web.service.user.CollectionVocabService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;

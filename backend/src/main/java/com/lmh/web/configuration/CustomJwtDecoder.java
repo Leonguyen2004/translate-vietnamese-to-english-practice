@@ -1,7 +1,7 @@
 package com.lmh.web.configuration;
 
 import com.lmh.web.dto.request.authentication.IntrospectRequest;
-import com.lmh.web.service.AuthenticationService;
+import com.lmh.web.service.user.AuthenticationService;
 import com.nimbusds.jose.JOSEException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;

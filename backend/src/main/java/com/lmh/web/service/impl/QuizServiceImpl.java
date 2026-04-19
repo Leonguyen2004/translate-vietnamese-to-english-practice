@@ -1,5 +1,7 @@
 package com.lmh.web.service.impl;
 
+
+import com.lmh.web.service.user.QuizService;
 import com.lmh.web.dto.request.quiz.StartQuizRequest;
 import com.lmh.web.dto.request.quiz.AnswerRequest;
 import com.lmh.web.dto.response.quiz.QuizQuestionResponse;
@@ -12,7 +14,7 @@ import com.lmh.web.model.Vocabulary;
 import com.lmh.web.model.QuizSession;
 import com.lmh.web.repository.CollectionVocaRepository;
 import com.lmh.web.repository.VocabularyRepository;
-import com.lmh.web.service.QuizService;
+import com.lmh.web.service.user.QuizService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

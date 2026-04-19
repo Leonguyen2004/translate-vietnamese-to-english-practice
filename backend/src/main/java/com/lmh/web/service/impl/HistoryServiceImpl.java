@@ -1,5 +1,7 @@
 package com.lmh.web.service.impl;
 
+
+import com.lmh.web.service.user.HistoryService;
 import com.lmh.web.common.exception.NotFoundException;
 import com.lmh.web.common.utils.PageableUtils;
 import com.lmh.web.dto.response.history.HistoryResponse;
@@ -7,8 +9,8 @@ import com.lmh.web.model.History;
 import com.lmh.web.model.Lesson;
 import com.lmh.web.model.User;
 import com.lmh.web.repository.HistoryRepository;
-import com.lmh.web.service.HistoryService;
-import com.lmh.web.service.lesson.LessonService;
+import com.lmh.web.service.user.HistoryService;
+import com.lmh.web.service.user.LessonService;
 import com.lmh.web.service.user.UserService;
 import com.lmh.web.utils.mapper.history.HistoryMapper;
 import lombok.RequiredArgsConstructor;

@@ -1,7 +1,9 @@
 package com.lmh.web.service.impl;
 
+
+import com.lmh.web.service.user.RedisService;
 import com.lmh.web.repository.UserRepository;
-import com.lmh.web.service.RedisService;
+import com.lmh.web.service.user.RedisService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.RedisTemplate;

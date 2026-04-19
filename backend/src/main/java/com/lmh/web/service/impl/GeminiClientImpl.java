@@ -1,5 +1,7 @@
 package com.lmh.web.service.impl;
 
+
+import com.lmh.web.service.user.GeminiClient;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.lmh.web.common.exception.GeminiException;
@@ -11,8 +13,8 @@ import com.lmh.web.model.History;
 import com.lmh.web.model.Lesson;
 import com.lmh.web.model.User;
 import com.lmh.web.repository.HistoryRepository;
-import com.lmh.web.service.GeminiClient;
-import com.lmh.web.service.lesson.LessonService;
+import com.lmh.web.service.user.GeminiClient;
+import com.lmh.web.service.user.LessonService;
 import com.lmh.web.service.user.UserService;
 import com.lmh.web.utils.mapper.history.HistoryMapper;
 import jakarta.validation.constraints.NotNull;

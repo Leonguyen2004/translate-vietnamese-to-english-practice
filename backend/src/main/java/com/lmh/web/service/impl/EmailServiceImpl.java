@@ -1,6 +1,8 @@
 package com.lmh.web.service.impl;
 
-import com.lmh.web.service.EmailService;
+
+import com.lmh.web.service.user.EmailService;
+import com.lmh.web.service.user.EmailService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

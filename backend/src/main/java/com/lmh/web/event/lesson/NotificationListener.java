@@ -1,6 +1,6 @@
 package com.lmh.web.event.lesson;
 
-import com.lmh.web.service.sse.SseService;
+import com.lmh.web.service.user.SseService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;

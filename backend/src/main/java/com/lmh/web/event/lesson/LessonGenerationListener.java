@@ -1,7 +1,7 @@
 package com.lmh.web.event.lesson;
 
 import com.lmh.web.event.lesson.LessonGenerationRequestedEvent;
-import com.lmh.web.service.gemini.GeminiLessonGeneratorService;
+import com.lmh.web.service.user.GeminiLessonGeneratorService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

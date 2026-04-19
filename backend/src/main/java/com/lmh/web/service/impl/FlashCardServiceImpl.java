@@ -1,5 +1,7 @@
 package com.lmh.web.service.impl;
 
+
+import com.lmh.web.service.user.FlashCardService;
 import com.cloudinary.Cloudinary;
 import com.lmh.web.dto.FlashCardDTO;
 import com.lmh.web.exception.AppException;
@@ -7,8 +9,8 @@ import com.lmh.web.exception.ErrorCode;
 import com.lmh.web.mapper.FlashCardMapper;
 import com.lmh.web.model.FlashCard;
 import com.lmh.web.repository.FlashCardRepository;
-import com.lmh.web.service.FileStorageService;
-import com.lmh.web.service.FlashCardService;
+import com.lmh.web.service.user.FileStorageService;
+import com.lmh.web.service.user.FlashCardService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

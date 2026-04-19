@@ -1,6 +1,7 @@
 package com.lmh.web.service.impl;
 
 
+import com.lmh.web.service.user.AuthenticationService;
 import com.lmh.web.common.Role;
 import com.lmh.web.common.constant.TypeToken;
 import com.lmh.web.dto.request.authentication.*;
@@ -21,14 +22,14 @@ import com.lmh.web.model.VerificationToken;
 import com.lmh.web.repository.InvalidTokenRepository;
 import com.lmh.web.repository.UserRepository;
 import com.lmh.web.repository.VerificationTokenRepository;
-import com.lmh.web.service.AuthenticationService;
-import com.lmh.web.service.EmailService;
+import com.lmh.web.service.user.AuthenticationService;
+import com.lmh.web.service.user.EmailService;
 
 import com.lmh.web.repository.InvalidTokenRepository;
 import com.lmh.web.repository.UserRepository;
-import com.lmh.web.service.AuthenticationService;
+import com.lmh.web.service.user.AuthenticationService;
 
-import com.lmh.web.service.RedisService;
+import com.lmh.web.service.user.RedisService;
 import com.nimbusds.jose.*;
 import com.nimbusds.jose.crypto.MACSigner;
 import com.nimbusds.jose.crypto.MACVerifier;

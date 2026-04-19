@@ -1,11 +1,13 @@
 package com.lmh.web.service.impl;
 
+
+import com.lmh.web.service.user.SuggestVocabularyService;
 import com.lmh.web.common.utils.PageableUtils;
 import com.lmh.web.dto.request.suggest.SuggestVocabularyRequest;
 import com.lmh.web.dto.response.suggest.SuggestVocabularyResponse;
 import com.lmh.web.model.SuggestVocabulary;
 import com.lmh.web.repository.SuggestVocabularyRepository;
-import com.lmh.web.service.SuggestVocabularyService;
+import com.lmh.web.service.user.SuggestVocabularyService;
 import com.lmh.web.utils.mapper.suggest.SuggestVocabularyMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

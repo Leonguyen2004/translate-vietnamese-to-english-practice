@@ -7,7 +7,7 @@ import com.lmh.web.dto.response.history.HistoryResponse;
 import com.lmh.web.dto.response.user.UserProfileResponse;
 import com.lmh.web.exception.AppException; // Import AppException
 import com.lmh.web.exception.ErrorCode;   // Import ErrorCode
-import com.lmh.web.service.AuthenticationService; // Import service mới
+import com.lmh.web.service.user.AuthenticationService; // Import service mới
 import com.lmh.web.service.user.UserProfileService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
