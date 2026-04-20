@@ -13,7 +13,9 @@ public class Application {
 
 	public static void main(String[] args) {
 		// Load environment variables from .env file
-		Dotenv dotenv = Dotenv.configure().load();
+		Dotenv dotenv = Dotenv.configure()
+				.ignoreIfMissing() // Cực kỳ quan trọng: Không lỗi nếu không có file .env
+				.load();
 		dotenv.entries().forEach(entry -> System.setProperty(entry.getKey(), entry.getValue()));
 
 		SpringApplication.run(Application.class, args);

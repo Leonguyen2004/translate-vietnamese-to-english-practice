@@ -2,7 +2,7 @@ package com.lmh.web;
 
 import com.lmh.web.dto.request.quiz.StartQuizRequest;
 import com.lmh.web.dto.response.quiz.QuizSessionResponse;
-import com.lmh.web.service.QuizService;
+import com.lmh.web.service.user.QuizService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

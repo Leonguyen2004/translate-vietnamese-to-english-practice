@@ -72,8 +72,13 @@ public class GeminiClientImpl implements GeminiClient {
         if (user.getCredit()<=0){
             throw new InvalidDataException("Don't enough credit! - " + username);
         }
+        String userApiKey = user.getApiKey();
+        String userApiUrl = user.getApiUrl();
+        if (userApiKey == null || userApiKey.isBlank() || userApiUrl == null || userApiUrl.isBlank()) {
+            throw new InvalidDataException("User " + username + " does not have API key/url configured.");
+        }
         Lesson lesson = lessonService.findById(lessonId);
-        Map<String, Object> responseGemini = callGemini(geminiRequest);
+        Map<String, Object> responseGemini = callGemini(geminiRequest, userApiUrl, userApiKey);
         if (!(boolean) responseGemini.get("isValid")){
             throw new GeminiException("No generated text");
         }
@@ -87,9 +92,8 @@ public class GeminiClientImpl implements GeminiClient {
         return historyMapper.toResponse(historyRepository.save(history));
     }
 
-    private Map<String, Object> callGemini(GeminiRequest geminiRequest) throws IOException {
-        String API_URL_TEMPLATE = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=%s";
-        String apiUrl = String.format(API_URL_TEMPLATE, geminiKey);
+    private Map<String, Object> callGemini(GeminiRequest geminiRequest, String apiUrl, String apiKey) throws IOException {
+        String apiUrlFull = apiUrl + "?key=" + apiKey;
 
         HttpHeaders headers = new HttpHeaders();
         headers.set("Content-Type", "application/json");
@@ -106,12 +110,11 @@ public class GeminiClientImpl implements GeminiClient {
 
         log.info("Request: {}", requestBody);
         WebClient webClient = WebClient.builder()
-                .baseUrl(apiUrl)
                 .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                 .build();
 
         String response = webClient.post()
-                .uri(apiUrl)
+                .uri(apiUrlFull)
                 .headers(httpHeaders -> httpHeaders.addAll(headers))
                 .bodyValue(requestBody)
                 .retrieve()

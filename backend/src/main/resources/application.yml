@@ -4,7 +4,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/lmh
     username: postgres
-    password: ${DB_PASSWORD}
+    password: 123456
   data:
     redis:
       host: localhost
@@ -61,6 +61,10 @@ cloudinary:
   cloud_name: dzvxgyg88
   api_key: 281855212738654
   api_secret: CBx98FIol43xihZJt0fX1AKgt9E
+gemini:
+  api:
+    key: ${GEMINI_API_KEY:}
+
 jwt:
   signerKey: "z8q/gnCQ3bJb4RWbC36UuznGJ0QNpnn1NSJuYO+nU0QWHPtgJE0y6BO3L2ZNZXnB"
   valid-duration: 90000

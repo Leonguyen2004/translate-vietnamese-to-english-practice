@@ -16,8 +16,8 @@ import java.time.LocalDateTime;
 @Configuration
 @RequiredArgsConstructor
 public class ApplicationInitConfiguration {
-    private final UserRepository userRepository ;
-    private final PasswordEncoder passwordEncoder ;
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
     @Bean
     ApplicationRunner applicationRunner() {
         return args -> {
@@ -34,7 +34,6 @@ public class ApplicationInitConfiguration {
                         .build();
                 userRepository.save(user);
             }
-        } ;
-
+        };
     }
 }

@@ -16,6 +16,9 @@ WORKDIR /app
 # Copy jar from build stage
 COPY --from=build /app/target/*.jar app.jar
 
+# Copy .env file
+COPY .env .
+
 EXPOSE 8081
 
 # Run the Spring Boot application
